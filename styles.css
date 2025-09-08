@@ -121,6 +121,7 @@ body {
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     position: relative;
     overflow: hidden;
+    padding-top: 80px; /* Add padding to account for fixed navbar */
 }
 
 .hero::before {
@@ -1494,14 +1495,21 @@ html {
         font-size: 1.1rem;
     }
 
+    .hero {
+        padding-top: 100px; /* Extra padding on mobile for navbar */
+        min-height: calc(100vh - 20px); /* Adjust height to account for padding */
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
+        padding-top: 1rem; /* Additional spacing */
     }
 
     .hero-title {
         font-size: 2.5rem;
+        margin-top: 1rem; /* Extra margin on mobile */
     }
 
     .hero-buttons {
@@ -1624,8 +1632,19 @@ html {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding-top: 120px; /* Even more padding on very small screens */
+        min-height: calc(100vh - 40px);
+    }
+
+    .hero-container {
+        padding-top: 1.5rem;
+    }
+
     .hero-title {
         font-size: 2rem;
+        margin-top: 1.5rem;
+        line-height: 1.2;
     }
 
     .section-header h2 {
